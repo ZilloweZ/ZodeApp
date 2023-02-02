@@ -1,0 +1,25 @@
+<header class="p-3-text-bg-dark">
+            <div class="container">
+              <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <%= link_to  root_path, class:"d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none" do%>
+                 <img id="headerLogo" class="logo" src="<%= asset_path 'logos.svg' %>" alt="Zode Logo">
+                <% end %>
+        
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                  
+                </ul>
+                
+                <%= link_to 'Home', root_path, id:"btnme2",class:"btn btn-outline-light me-2" %>
+                <%= link_to 'Products', '/u/products', id:"btnme3",class:"btn btn-outline-light me-2" %>
+                <%= link_to 'More', '/more/home', id:"btnme3",class:"btn btn-outline-light me-2" %>
+                <%= link_to 'About', '/u/about', id:"btnme3",class:"btn btn-outline-light me-2" %>
+              <% if current_user %>
+                <%= link_to ' My Account', '/u/user', id:"btnme1",class:"bi bi-person-circle btn btn-outline-light me-2" %>
+                <%= link_to 'Sign Out', destroy_user_session_path, 'data-turbo-method': :delete, id:"btnme1",class:"btn btn-outline-light me-2" %>
+              <% else %>
+                <%= link_to 'Sign Up', new_user_registration_path, id:"btnme1",class:"btn btn-outline-light me-2" %>
+                <%= link_to 'Login', new_user_session_path, id:"btnme1",class:"btn btn-outline-light me-2" %>
+              <% end %>
+              </div>
+            </div>
+        </header>

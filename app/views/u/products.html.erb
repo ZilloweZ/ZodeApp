@@ -1,0 +1,80 @@
+<main class="container">
+
+    <div id="backcolmd6" class="p-4 p-md-5 mb-4 rounded text-bg-black">
+        <div class="col-md-6 px-0">
+          <h1 class="display-4 fst">Title of a longer featured blog post</h1>
+          <p id="p" class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and
+            efficiently about what’s most interesting in this post’s contents.</p>
+          <% if current_user %>
+                    <a href="news" class="text-white fw-bold"><button id="btnread">Read More</button></a>
+          <% else %>
+                    <a href="news" class="text-white fw-bold"><button id="btnread">Read More</button></a>
+                    <%= link_to 'Sign Up', new_user_registration_path, id:"btnread",class:"btn btn-outline-secondary btn-lg px-4" %>
+                    <%= link_to 'Login', new_user_session_path, id:"btnread",class:"btn btn-outline-secondary btn-lg px-4" %>
+          <% end %>
+          </div>
+      </div>
+
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Open Source</strong>
+              <h3 class="mb-0">ZoTI</h3>
+              <div class="mb-1 text">Nov 12</div>
+              <p id="p" class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in
+                to additional content.</p>
+              <a href="news" class="stretched-link">View</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img class="bd-placeholder-img" width="200" height="250" src="<%= asset_path 'zd.svg' %>" alt="IMG">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Open Source</strong>
+              <h3 class="mb-0">Clock</h3>
+              <div class="mb-1 text">2023/1/26</div>
+              <p id="p" class="mb-auto">This is a wider card with supporting text below as a natural lead-in to
+                additional content.</p>
+              <a href="/products/clock" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img class="bd-placeholder-img" width="200" height="250" src="<%= asset_path 'zos.svg' %>" alt="IMG">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Design</strong>
+              <h3 class="mb-0">AI</h3>
+              <div class="mb-1 text">Nov 11</div>
+              <p id="p" class="mb-auto">This is a wider card with supporting text below as a natural lead-in to
+                additional content.</p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img class="bd-placeholder-img" width="200" height="250" src="<%= asset_path 'logos.svg' %>" alt="IMG">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Design</strong>
+              <h3 class="mb-0">AI</h3>
+              <div class="mb-1 text">Nov 11</div>
+              <p id="p" class="mb-auto">This is a wider card with supporting text below as a natural lead-in to
+                additional content.</p>
+              <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img class="bd-placeholder-img" width="200" height="250" src="<%= asset_path 'webzos.svg' %>" alt="IMG">
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>

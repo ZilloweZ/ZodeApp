@@ -1,0 +1,16 @@
+        <div class="container">
+        
+            <footer id="footd" class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+              <p class="col-md-4 mb-0 text-muted">&copy;<span id="Year"></span> Zode | All Rights Reserved</p>
+              <%= link_to  root_path, class:"col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none" do %>
+                <img id="footerLogo" width="65" src="<%= asset_path 'logos.svg' %>" alt="">
+              <% end %>
+              <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><%= link_to 'Home', root_path, id:"btnme2",class:"nav-link px-2 text-muted" %></li>
+                <li class="nav-item"><%= link_to 'Products', '/u/products', id:"btnme2",class:"nav-link px-2 text-muted" %></li>
+                <li class="nav-item"><%= link_to 'More', '/more/home', id:"btnme2",class:"nav-link px-2 text-muted" %></li>
+                <li class="nav-item"><%= link_to 'About', '/u/about', id:"btnme2",class:"nav-link px-2 text-muted" %></li>
+              </ul>
+            </footer>
+          </div>  
+

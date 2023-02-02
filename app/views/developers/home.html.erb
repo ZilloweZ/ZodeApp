@@ -1,0 +1,77 @@
+<% if current_user.role = 1 %>
+    
+    <div id="secpxhero" class="px-4 py-5 my-5 text-center">
+                <img id="dmx4Logo" class="d-block mx-auto mb-4" src="<%= asset_path 'zd.svg' %>" alt="" width="150">
+                <h1 id="titlehero1" class="display-5 fw-bold">Zode Developers</h1>
+                <div class="col-lg-6 mx-auto">
+                  <p id="herop" class="lead mb-4">A Big Platform That Let You To Do Cool Things</p>
+                  <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                  <% if current_user %>
+                    <%= link_to 'Try ZoTI', root_path, id:"btnhero1",class:"btn btn-outline-secondary btn-lg px-4" %>
+                  <% else %>
+                    <%= link_to 'Sign Up', new_user_registration_path, id:"btnhero1",class:"btn btn-outline-secondary btn-lg px-4" %>
+                    <%= link_to 'Login', new_user_session_path, id:"btnhero2",class:"btn btn-outline-secondary btn-lg px-4" %>
+                  <% end %>
+                  </div>
+                </div>
+              </div>
+
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+
+    <div class="row align-items-center g-lg-5 py-5">
+      <div class="col-lg-7 text-center text-lg-start">
+        <h1 id="titlehero1" class="display-4 fw-bold lh-1 mb-3">You're a Developer ?</h1>
+        <p id="herop" class="col-lg-10 fs-4">Join Zode Developers Community <br/> And Be a Zode Developer. <br/> Sign Up Right Now</p>
+      </div>
+
+      <div class="col-md-10 mx-auto col-lg-5">
+        <form id="heroform" class="p-4 p-md-5 border rounded-3 bg-light">
+          <div class="form-floating mb-3">
+            <input required type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating mb-3">
+            <textarea required class="form-control" id="floatingInputT" placeholder="Message"></textarea>
+            <label for="floatingInput">You're Experince</label>
+          </div>
+          <button id="submit" class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+          <hr class="my-4">
+          <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+              <div class="container col-xxl-8 px-4 py-5">
+                <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                  <div class="col-10 col-sm-8 col-lg-6">
+                    <img id="heroLogo" src="<%= asset_path 'Zode Word Logo.svg' %>" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" loading="lazy">
+                  </div>
+                  <div class="col-lg-6">
+                    <h1 id="titlehero1" class="display-5 fw-bold lh-1 mb-3">Lorem, ipsum</h1>
+                    <p id="herop" class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <a href=""><button id="btnhero1" type="button" class="btn btn-primary btn-lg px-4 me-md-2">Learn More</button></a>
+                        <a href=""> <button id="btnhero2" type="button" class="btn btn-outline-secondary btn-lg px-4">Download SDK</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+<% else %>
+    <div class="container col-xxl-8 px-4 py-5">
+                <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                  <div class="col-10 col-sm-8 col-lg-6">
+                    <img id="heroLogo" src="<%= asset_path 'Zode Word Logo.svg' %>" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="400" loading="lazy">
+                  </div>
+                  <div class="col-lg-6">
+                    <h1 id="titlehero1" class="display-5 fw-bold lh-1 mb-3">Lorem, ipsum</h1>
+                    <p id="herop" class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <a href=""><button id="btnhero1" type="button" class="btn btn-primary btn-lg px-4 me-md-2">Learn More</button></a>
+                        <a href=""> <button id="btnhero2" type="button" class="btn btn-outline-secondary btn-lg px-4">Download SDK</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+<% end %>
